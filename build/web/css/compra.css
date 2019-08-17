@@ -1,0 +1,259 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@font-face {
+	font-family: 'FonteLogo';
+	src: url("../_fonts/bubblegum-sans-regular.otf");
+}
+/*SITE: https://www.smartia.com.br/blog/lancamentos-carros-2019/ */
+
+/*Corpo da pagina */
+body {
+	font-family: Arial, sans-serif;
+	background-color: #dddddd;
+        background-image: url("../img/fundoSite.jpg");
+}
+
+div#interface {
+	width: 1280px;
+	background-color: #ffffff;
+	margin: -20px auto 0px auto;
+	box-shadow: 0px 0px 50px rgba(0,0,0,.9);
+	padding: 0px;
+        background-image: url("../img/fundoSite.jpg");
+}
+
+div#interface h1 {
+    color: white;
+    font-family: inherit;
+    text-align: center;
+}
+
+/*Cabecalho da pagina */
+header#cabecalho img#icone{
+	position: absolute;
+	right: 13px;
+	top: 90px;
+        height: 120px;
+}
+
+header#cabecalho {
+	border-bottom: 10px gray solid;
+	height: 140px;
+        background-color: dimgrey;
+	background-image: url("../img/fundoSite.jpg");
+        background-position: center;
+}
+
+header#cabecalho a#home {
+	font-family: "FonteLogo", sans-serif;
+	font-size: 40pt;
+	color: transparent;
+        -webkit-text-stroke: 1px #fff;
+	text-shadow: 10px 10px 10px rgba(0,0,0,.9);
+	padding: 0px;
+	margin-bottom: 0px
+}
+
+header#cabecalho h2 {
+	font-family: 'FonteLogo', sans-serif;
+	color: silver;
+	font-size: 20pt;
+	padding: 0px;
+        text-shadow: 10px 10px 10px rgba(0,0,0,.6);
+        text-align: center;
+}
+
+header#cabecalho:hover {
+    height: 300px;
+    margin-top: -20px;
+    -webkit-transition: all .3s ease-in;
+}
+
+header#cabecalho:hover a#home {
+    font-size: 80pt;
+    text-align: center;
+    -webkit-transition: all .3s ease-in;
+}
+
+header#cabecalho:hover h2 {
+    margin-top: 11%;
+    text-align: left;
+    font-size: 25pt;
+    -webkit-transition: all .3s ease-in;
+}
+
+header#cabecalho:hover img#icone{
+    position: absolute;
+    right: 13px;
+    height: 200px;
+    top: 160px;
+    -webkit-transition: all .3s ease-in;
+}
+
+header#cabecalho a#home:hover {
+    color: red;
+    -webkit-transition: all .3s ease-in;
+}
+
+
+/*Navegador de paginas */
+nav#menu {
+	display: block;
+}
+
+nav#menu ul {
+	list-style: none;
+	text-transform: uppercase;
+	position: absolute;
+	top: -20px;
+	right: 35px;
+}
+
+nav#menu li {
+	display: inline-block;
+	background-color: honeydew;
+	padding: 10px;
+	margin: 2px;
+	transition: background-color;
+}
+
+nav#menu h1{
+	display: none;
+}
+
+nav#menu a {
+	color: #000000;
+	text-decoration: none;
+}
+
+nav#menu li:hover {
+	background-color: black;
+        -webkit-transition: all .3s ease-in;
+}
+nav#menu li:hover a{
+	color: blue;
+	text-decoration: underline;
+        -webkit-transition: all .3s ease-in;
+}
+
+/* cabecalho do artigo */
+hgroup#cabecalho-artigo h1 {
+	font-family: 'FonteLogo', sans-serif;
+	font-size: 30pt;
+	color: white;
+	margin-bottom: 0px;
+        text-align: center;
+}
+
+.direita {
+	text-align: right;
+}
+
+hgroup#cabecalho-artigo h2 {
+	font-size: 13pt;
+	color: #cecece;
+	margin: 0px;
+}
+
+hgroup#cabecalho-artigo h3 {
+	font-size: 12px;
+	color: #cecece;
+}
+
+
+
+/*Configuração das imagens pagina */
+
+img#comprar{
+    height: 50px;
+}
+
+.wrap-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 32%;
+  max-width: 100%;
+  margin: 0 0 4rem;
+  box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.25);
+  background-color: darkgrey;
+}
+.card .wrap-image {
+  position: relative;
+}
+.card .wrap-image img {
+  width: 100%;
+  height: auto;
+}
+.card .wrap-image svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+}
+.card .wrap-image svg polygon, .card .wrap-image svg path {
+  fill: darkgrey;
+  stroke: darkgrey;
+}
+.card:nth-child(4) .wrap-image svg path {
+  stroke-width: 3px;
+}
+.card:nth-child(5) .wrap-image svg path {
+  stroke-width: 4px;
+}
+.card:nth-child(6) .wrap-image svg path {
+  stroke-width: 6px;
+}
+.card .contents {
+  padding: 1rem;
+}
+.card .contents h3 {
+  margin: 0 0 .5rem;
+  font-size: 1.125em;
+  color: #fff;
+}
+.card .contents .text {
+  color: rgba(0, 0, 0, 0.5);
+  line-height: 1.6;
+  font-size: .9em;
+}
+
+@media all and (max-width: 768px) {
+  .card {
+    width: 49%;
+    margin-bottom: 3rem;
+  }
+}
+@media all and (max-width: 480px) {
+  .card {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+
+
+/*Rodape da pagina */
+
+footer#rodape {
+	clear: both;
+	border-top: 2px solid gray;
+}
+
+footer#rodape a#link {
+    color: red;
+}
+
+footer#rodape a#link:hover {
+    color: blue;
+}
+
+footer#rodape p {
+	text-align: center;
+        font-size: 9pt;
+        color: white;
+        font-family: sans-serif;
+}
